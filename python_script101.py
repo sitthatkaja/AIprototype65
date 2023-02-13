@@ -64,7 +64,7 @@ if __name__ == "__main__":
     print_ones()
 
     print(f'YVAL = {x.yval}')
-    print(f'x = {x.x}')
+    print(f'xt = {(x.x)*2}')
     # print(f'm = {x.m}')
     # print(f'n = {x.n}')
 
