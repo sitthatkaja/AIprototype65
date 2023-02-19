@@ -10,10 +10,30 @@ if __name__ == "__main__":
     # out, err = process1.communicate()
     # print(out.decode('utf-8'))
 
-    for x in range(1,10):
-        print(f'{x}')
-        process = subprocess.Popen(["python","python_script101.py","--x"],stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        out, err = process.communicate()
-        print(out.decode('utf-8'))
+    sumxt = 0
+    count = 0 
 
-#สั่งรัน python_script101.py 50 รอบ โดย x = 1,3,5,7.... แล้วให้เอา output ของ xt มารวมกันแล้วปริ้นออกมา
+    for x in range(1,100):
+
+        if x % 2 != 0:
+            count +=1
+
+            print(f'<>'*10)
+            print(f'This is number {x}')
+
+            process = subprocess.Popen(["python","python_script101.py","--x",f"{x}"],stdout=subprocess.PIPE, stderr=subprocess.PIPE)    
+            out, err = process.communicate()
+            print(out.decode('utf-8'))
+
+            sum = (x*2)
+            sumxt += (x*2)
+            print(f'This is round {count}')
+            print(f'sum of {x} is = {sum}')
+            print(f'sum total is {sumxt}')
+            print(f'--'*10)
+
+    print(f'=='*10)
+    print(f'SUM of XT ={sumxt}')
+    print(f'=='*10)
+
+#สั่งรัน python_script101.py 50 รอบ โดย x = 1,3,5,7....99 แล้วให้เอา output ของ xt มารวมกันแล้วปริ้นออกมา
