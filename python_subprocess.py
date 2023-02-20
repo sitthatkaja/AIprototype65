@@ -36,4 +36,5 @@ if __name__ == "__main__":
     print(f'SUM of XT ={sumxt}')
     print(f'=='*10)
 
+
 #สั่งรัน python_script101.py 50 รอบ โดย x = 1,3,5,7....99 แล้วให้เอา output ของ xt มารวมกันแล้วปริ้นออกมา
